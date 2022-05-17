@@ -1,2 +1,2 @@
 # MC-Lect-10-Activities
-activities, intents, passign data from one activity to other (using extras)
+activities, intents, phone-call, URL-open, passign data from one activity to other (using extras)
