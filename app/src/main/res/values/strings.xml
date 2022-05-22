@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lect_10_Activities</string>
+
+    <string name="google">https://www.google.com</string>
 </resources>

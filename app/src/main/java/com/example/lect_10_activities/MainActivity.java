@@ -5,34 +5,57 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button b,b3;
+    Button btnCall,btnWebPage,btnSeocndActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        b=findViewById(R.id.button);
-        b.setOnClickListener(new View.OnClickListener() {
+        btnCall=findViewById(R.id.btn_call);
+        btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri uri=Uri.parse("+923001234567");
+                Uri uri=Uri.parse("tel:+923001234567");
                 Intent intent=new Intent(Intent.ACTION_DIAL,uri);
                 startActivity(intent);
             }
         });
 
-        b3=findViewById(R.id.button3);
-        b3.setOnClickListener(new View.OnClickListener() {
+        btnWebPage=findViewById(R.id.btn_web);
+
+        btnSeocndActivity=findViewById(R.id.btn_a2);
+        /*btnSeocndActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(this,MainActivity2.class);
+                startActivity(intent);
             }
-        });
+        });*/
+    }
+    public void f2(View view) {
+        Log.d("t1","msg");
+        Intent intent=new Intent(this,MainActivity2.class);
+        startActivity(intent);
+    }
+
+    public void openWebPage(View view) {
+        String url="https://www.google.com";
+        Uri webpage = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View view) {
+        //throw new IllegalStateException("Unexpected value: " + view.getId());
+       /* Intent intent=new Intent(this,MainActivity2.class);
+        startActivity(intent);*/
     }
 }
