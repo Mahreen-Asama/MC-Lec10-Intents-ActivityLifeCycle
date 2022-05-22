@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginBottom="22dp"
-        android:text="MAIL"
         android:onClick="ComposeEmail"
+        android:text="MAIL"
         app:layout_constraintBottom_toTopOf="@+id/btn_call"
         app:layout_constraintStart_toStartOf="@+id/btn_call" />
 
@@ -50,5 +50,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="88dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="name"
+        app:layout_constraintBottom_toTopOf="@+id/btn_a2"
+        app:layout_constraintStart_toStartOf="@+id/btn_a2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

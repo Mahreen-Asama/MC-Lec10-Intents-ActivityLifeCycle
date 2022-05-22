@@ -11,7 +11,8 @@
         android:theme="@style/Theme.Lect_10_Activities">
         <activity
             android:name=".MainActivity2"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
