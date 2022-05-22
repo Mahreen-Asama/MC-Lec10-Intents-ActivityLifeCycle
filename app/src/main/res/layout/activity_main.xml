@@ -7,6 +7,17 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btn_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="22dp"
+        android:text="MAIL"
+        android:onClick="ComposeEmail"
+        app:layout_constraintBottom_toTopOf="@+id/btn_call"
+        app:layout_constraintStart_toStartOf="@+id/btn_call" />
+
+    <Button
         android:id="@+id/btn_call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,9 +44,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="187dp"
+        android:onClick="openWebPage"
         android:text="Go to GOOGLE"
         android:textSize="34sp"
-        android:onClick="openWebPage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

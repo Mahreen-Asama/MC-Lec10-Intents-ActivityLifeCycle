@@ -34,10 +34,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         /*btnSeocndActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                throw new IllegalStateException("Unexpected value: " + view.getId());
                 Intent intent=new Intent(this,MainActivity2.class);
                 startActivity(intent);
             }
         });*/
+    }
+    public void ComposeEmail(View view) {
+        Intent intent=new Intent(Intent.ACTION_SENDTO);
+        //intent.setType("*/*");
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_EMAIL, "sharmeensheri2001@gmail.com");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Hello");
+        intent.putExtra(Intent.EXTRA_TEXT, "THIS IS TEXT");
+        if (intent.resolveActivity(getPackageManager()) != null){
+                startActivity(intent);
+        }
     }
     public void f2(View view) {
         Log.d("t1","msg");
