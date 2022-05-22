@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("A1", " onCreate Activity Main");
 
         btnCall=findViewById(R.id.btn_call);
         btnCall.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });*/
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("A1", "onStart Activity Main");
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("A1", "onResume Activity Main");
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("A1", "onPause Activity Main");
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("A1", "onStop Activity Main");
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("A1", "onDestroy Activity Main");
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("A1", "onRestart Activity Main");
+    }
+
+
+
+    // other on click functions of different buttons
     public void ComposeEmail(View view) {
         Intent intent=new Intent(Intent.ACTION_SENDTO);
         //intent.setType("*/*");
