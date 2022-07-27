@@ -2,4 +2,3 @@
 activities, intents, phone-call, URL-open, passign data from one activity to other (using extras).
 
 c1
-c2
